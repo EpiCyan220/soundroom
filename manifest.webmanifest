@@ -1,7 +1,7 @@
 {
   "id":"./",
-  "name":"999 Soundroom — Juice WRLD inspired player",
-  "short_name":"999 Soundroom",
+  "name":"Juice WRLD Vault",
+  "short_name":"Juice WRLD Vault",
   "description":"A fan-made 999 inspired music player for your own music.",
   "start_url":"./index.html",
   "scope":"./",
@@ -9,5 +9,5 @@
   "background_color":"#0d0913",
   "theme_color":"#0d0913",
   "orientation":"any",
-  "icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+  "icons":[{"src":"juice-wrld-icon.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]
 }
