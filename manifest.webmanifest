@@ -1,15 +1,13 @@
 {
-  "id": "./",
-  "name": "Soundroom — Music Player",
-  "short_name": "Soundroom",
-  "description": "Play your music from MEGA folders, direct links, or your device.",
-  "start_url": "./index.html",
-  "scope": "./",
-  "display": "standalone",
-  "background_color": "#101313",
-  "theme_color": "#101313",
-  "orientation": "any",
-  "icons": [
-    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
-  ]
+  "id":"./",
+  "name":"999 Soundroom — Juice WRLD inspired player",
+  "short_name":"999 Soundroom",
+  "description":"A fan-made 999 inspired music player for your own music.",
+  "start_url":"./index.html",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#0d0913",
+  "theme_color":"#0d0913",
+  "orientation":"any",
+  "icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
 }

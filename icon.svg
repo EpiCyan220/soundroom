@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<rect width="512" height="512" rx="112" fill="#c4f36b"/>
-<path d="M210 354V151l181-38v203" fill="none" stroke="#17200e" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
-<ellipse cx="159" cy="358" rx="58" ry="43" transform="rotate(-18 159 358)" fill="#17200e"/>
-<ellipse cx="337" cy="319" rx="58" ry="43" transform="rotate(-18 337 319)" fill="#17200e"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff6c9b"/><stop offset="1" stop-color="#a95fff"/></linearGradient></defs><rect width="512" height="512" rx="112" fill="#120b1b"/><circle cx="256" cy="256" r="188" fill="url(#g)" opacity=".25"/><text x="256" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="155" letter-spacing="-15" fill="#fff">999</text></svg>
