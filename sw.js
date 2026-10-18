@@ -1,4 +1,4 @@
-const CACHE = "juice-wrld-vault-mobile-v132";
+const CACHE = "juice-wrld-vault-mobile-v133";
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg", "./juice-wrld-icon.png", "./driveby-car.png", "./driveby-cop.png"];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)));
