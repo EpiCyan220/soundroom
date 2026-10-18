@@ -447,7 +447,24 @@ let cityResizeTimer;window.addEventListener('resize',()=>{clearTimeout(cityResiz
     expandedPlayerBodyStyle = null;
     window.scrollTo(0, expandedPlayerScrollY);
   }
-  const openExpandedPlayer = () => { syncExpandedPlayer(); renderQueue(); expandedPlayerDialog.showModal(); lockPageBehindExpandedPlayer(); };
+  function centerExpandedPlayerInViewport() {
+    if (!expandedPlayerDialog.open || !window.matchMedia('(max-width: 560px)').matches) return;
+    const viewport = window.visualViewport;
+    const width = viewport ? viewport.width : document.documentElement.clientWidth;
+    const height = viewport ? viewport.height : document.documentElement.clientHeight;
+    const offsetLeft = viewport ? viewport.offsetLeft : 0;
+    const offsetTop = viewport ? viewport.offsetTop : 0;
+    Object.assign(expandedPlayerDialog.style, {
+      position: 'fixed', left: `${offsetLeft + width / 2}px`, top: `${offsetTop + height / 2}px`,
+      right: 'auto', bottom: 'auto', margin: '0', transform: 'translate(-50%, -50%)',
+      width: `${Math.max(0, Math.min(560, width - 24))}px`,
+      maxHeight: `${Math.max(0, height - 24)}px`
+    });
+  }
+  window.addEventListener('resize', centerExpandedPlayerInViewport);
+  window.visualViewport?.addEventListener('resize', centerExpandedPlayerInViewport);
+  window.visualViewport?.addEventListener('scroll', centerExpandedPlayerInViewport);
+  const openExpandedPlayer = () => { syncExpandedPlayer(); renderQueue(); expandedPlayerDialog.showModal(); lockPageBehindExpandedPlayer(); requestAnimationFrame(centerExpandedPlayerInViewport); };
   nowPlayingOpen.addEventListener('click', openExpandedPlayer);
   nowPlayingOpen.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openExpandedPlayer(); } });
   expandedPlayerDialog.addEventListener('close', unlockPageBehindExpandedPlayer);
