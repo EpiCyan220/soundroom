@@ -1,4 +1,4 @@
-const CACHE = "soundroom-shell-v62";
+const CACHE = "soundroom-shell-v63";
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg", "./juice-wrld-icon.png", "./driveby-car.png"];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)));
